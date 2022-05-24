@@ -12,7 +12,7 @@ body{
 
 .container{
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 300px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,11 +37,28 @@ body{
     font-size: 64px;
     line-height: 75px;
 }
+.box-info > .box-link{
+    display: flex;
+    font-weight: 300;
+    color: #0000;
+    margin-left: 2px;
+}
 
+.box-info > .box-link a{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #ffff;
+    font-weight: 700;
+    margin: 10px 6px;
+    padding: 16px 36px;
+    border-radius: 5px;
+}
+.box-info > .box-link a:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #ffff;
+}
 .box-fotos{
     width: 40%;
     height: 300px;
-    border: 1px solid #fff;
 }
 .box-fotos > img{
     border-radius: 50%;
