@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,8 +16,9 @@
 body{
     background: var(--color-blue-degrade);
     color: var(--color-white);
-    font-family: 'Roboto', sans-serif;
-    font-size: 100;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +32,7 @@ body{
     align-items: center;
     margin-top: 40px;
     flex-wrap: wrap;
+    gap: 10px;
 }
 .box-info{
     width: 55%;
@@ -47,6 +51,8 @@ body{
 }
 .box-info > h3{
     font-size: 16px;
+    font-weight: 500;
+    font-weight: bold;
     margin: -14px 0 32px 0;
 }
 .box-info > .box-link{
@@ -91,6 +97,7 @@ body{
 .footer > span{
     margin-top: 40px;
     color: var(--color-white);
+    font-weight: 300;
 }
 .footer > span > a{
     color: var(--color-white);
@@ -133,12 +140,13 @@ body{
     .box-info > h3{
         font-size: 15px;
     }
+    .footer > span{
+        font-size: 13px;
+    }
   }
 
   @media (max-width: 332px) {
-        .footer{
-            font-size: 12px;
-        }
+        
         .box-link{
             display: flex;
             flex-direction: column;
@@ -147,12 +155,18 @@ body{
             width: 100%;
         }
         .box-info > h2{
-            font-size: 35px;
+            font-size: 33px;
             margin:0;
             padding: 0;
             margin-top:-35px;
         }
         .box-info > h3{
             font-size: 14px;
+        }
+        .footer{
+            width: 100vw;
+        }
+        .footer span{
+            font-size: 10px;
         }
   }
