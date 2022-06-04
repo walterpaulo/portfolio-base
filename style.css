@@ -1,29 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
+:root{
+    --main-bg-color: #0B0F64;
+    --color-white: #ffff;
+    --color-white-cl: #c4c4c4;
+    --color-blue: rgb(2,0,36);
+    --color-black: #00000;
+    --color-blue-degrade: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,0.9429971817828694) 67%, rgba(0,212,255,1) 100%);
+}
+
 body{
-    background-color: #0B0F64 ;
-    color: #ffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 100;
+    background: var(--color-blue-degrade);
+    color: var(--color-white);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .container{
-    width: 100vw;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 150px);
+    width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 30px;
-    margin-top: 100px;
-    align-items:flex-start ;
+    align-items: center;
+    margin-top: 40px;
     flex-wrap: wrap;
+    gap: 10px;
 }
-
 .box-info{
-    width: 40%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,8 +49,14 @@ body{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 44px;
     line-height: 75px;
+}
+.box-info > h3{
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: bold;
+    margin: -14px 0 32px 0;
 }
 .box-info > .box-link{
     display: flex;
@@ -43,11 +64,10 @@ body{
     color: #0000;
     margin-left: 2px;
 }
-
 .box-info > .box-link a{
     text-decoration: none;
     font-size: 20px;
-    background-color: #ffff;
+    background-color: var(--color-white);
     font-weight: 700;
     margin: 10px 6px;
     padding: 16px 36px;
@@ -58,16 +78,101 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #ffff;
 }
 .box-fotos{
+    display: flex;
+    align-items: center;
     width: 40%;
     height: 300px;
 }
 .box-fotos > img{
     border-radius: 50%;
+    max-width: 80%;
+    padding: 5px;
+    border: white solid 3px;
 }
 .footer{
-    width: 100vw;
-    position: absolute;
-    bottom: 10px;
+    width: 100%;
+    height: 90px;
     text-align: center;
     font-weight: 700;
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    color: var(--color-white);
+    font-weight: 300;
 }
+.footer > span{
+    margin-top: 40px;
+}
+.footer > span > a{
+    color: var(--color-white);
+}
+.footer > p > a{
+    color: var(--color-white)
+}
+
+@media (max-width: 702px) {
+    .container {
+        width: 100vw;
+        height: calc(100vh - 185px);
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 35px;
+    }
+    .box-info{
+        width: 90%;
+        justify-content: flex-start;
+        height: 300px;
+    }
+    .box-fotos{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer{
+        width: 100%;
+        height: 130px;
+        text-align: center;
+        font-weight: 700;
+        padding-top: 20px;
+    }
+    .box-info > h2{
+        font-size: 40px;
+        margin-top:-30px;
+    }
+    .box-info > h3{
+        font-size: 15px;
+    }
+    .footer > span p{
+        font-size: 13px;
+    }
+  }
+
+  @media (max-width: 332px) {
+        
+        .box-link{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+        .box-info > h2{
+            font-size: 33px;
+            margin:0;
+            padding: 0;
+            margin-top:-35px;
+        }
+        .box-info > h3{
+            font-size: 14px;
+        }
+        .footer{
+            width: 100vw;
+        }
+        .footer span p{
+            font-size: 10px;
+        }
+  }
