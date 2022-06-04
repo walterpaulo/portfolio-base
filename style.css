@@ -141,7 +141,7 @@ body{
     }
     .box-info > h2{
         font-size: 40px;
-        margin-top:-30px;
+        margin-top:-7px;
     }
     .box-info > h3{
         font-size: 15px;
@@ -164,7 +164,7 @@ body{
             font-size: 33px;
             margin:0;
             padding: 0;
-            margin-top:-35px;
+            margin-top:-30px;
         }
         .box-info > h3{
             font-size: 14px;
